@@ -1,0 +1,86 @@
+<!doctype html>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<body>
+    
+            
+    <a class="btn btn-block btn-primary" href="/cart">View Cart</a>
+            
+    <div class="container mt-5">
+        <div class="container d-flex justify-content-around">
+            {% for d in data %}
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="static/uploads/{{d[3]}}">
+                    <div class="card-body">
+                        <h6>{{d[1]}}</h6>
+                        <a type="button" href="/add/{{d[0]}}" class="btn btn-sm btn-outline-secondary">Add</a>
+                        <small class="text-muted">Price : {{d[2]}}</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <!-- <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        role="img" aria-label="Placeholder: Thumbnail">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                    </svg>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <small class="text-muted">9 mins</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
+                        role="img" aria-label="Placeholder: Thumbnail">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
+                            dy=".3em">Thumbnail</text>
+                    </svg>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                        <small class="text-muted">9 mins</small>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+    }
+
+    #login .container #login-row #login-column #login-box {
+        margin-top: 120px;
+        max-width: 600px;
+        height: 320px;
+        border-radius: 6px;
+        box-shadow: 6px;
+        background-color: #EAEAEA;
+    }
+
+    #login .container #login-row #login-column #login-box #login-form {
+        padding: 20px;
+    }
+
+    #login .container #login-row #login-column #login-box #login-form #register-link {
+        margin-top: -85px;
+    }
+</style>
+
+</html>
